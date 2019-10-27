@@ -39,13 +39,25 @@
 # Guía de estilos aplicada: PEP8
 
 # #           Descripción           # #
-# Ejemplo de uso para la librería, mostrará el índice uv, el valor UVA y UVB
+# Ejemplo de uso para la librería, mostrará el índice UV, el valor UVA y UVB
 
 from time import sleep
 from VEML6075 import VEML6075
+from VEML6075_uv_index import VEML6075_uv_index
+from VEML6075_uva import VEML6075_uva
+from VEML6075_uvb import VEML6075_uvb
 
-veml6075 = VEML6075(integration_time=100)
+veml6075 = VEML6075(integration_time=200)
+veml6075_uv_index = VEML6075_uv_index(integration_time=200)
+veml6075_uva = VEML6075_uva(integration_time=200)
+veml6075_uvb = VEML6075_uvb(integration_time=200)
 
 while True:
+    print('Debug Clase Padre')
     veml6075.debug()
+    sleep(3)
+    print('Debug de cada Clase Hija')
+    veml6075_uv_index.debug()
+    veml6075_uva.debug()
+    veml6075_uvb.debug()
     sleep(3)

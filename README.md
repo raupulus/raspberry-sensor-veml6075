@@ -1,5 +1,8 @@
 # raspberry-sensor-veml6075
 
+Este repositorio se encuentra disponible aquí:
+https://gitlab.com/fryntiz/raspberry-sensor-veml6075.git
+
 Clase para integrar el sensor VEML6075 con python en aplicaciones fácilmente con métodos para obtener valores y estructura para generar dinámicamente su tabla con SQLAlchemy. 
 Mide:
 
@@ -17,6 +20,12 @@ https://github.com/adafruit/Adafruit_CircuitPython_VEML6075
 De forma que este repositorio utiliza esa librería y sus dependencias como base
 añadiendo otras características que he visto necesarias en mi caso.
 
+La clase VEML6075 puede funcionar de forma autónoma, aún así también es
+extendida por clases hijas para seccionar el tipo de resultado obtenido y
+tratarse de forma independiente en aplicaciones que lo implementen. 
+Por lo tanto puedes usar dicha clase ignorando las clases hijas o puedes
+usarlas en conjunto.
+
 ## Dependencias
 
 Los entornos donde han sido probados satisfactoriamente utilizaban las 
@@ -31,7 +40,7 @@ Se tiene que instalar la librería de adafruit mediante el gestor de paquetes de
 python 3
 
 ```bash
-pip3 install adafruit-circuitpython-veml6070
+pip3 install adafruit-circuitpython-veml6075
 ```
 
 Además, también es necesario instalar las librerías siguientes:

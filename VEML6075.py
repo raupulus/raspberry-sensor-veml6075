@@ -65,21 +65,24 @@ class VEML6075(AbstractModel):
         Obtiene el índice UV.
         :return: Devuelve el índice UV.
         """
-        return self.sensor.uv_index
+        value = self.sensor.uv_index
+        return value if value >= 0.0 else 0.0
 
     def get_uva(self):
         """
         Obtiene el índice UVA.
         :return: Devuelve el índice UVA.
         """
-        return self.sensor.uva
+        value = self.sensor.uva
+        return value if value >= 0.0 else 0.0
 
     def get_uvb(self):
         """
         Obtiene el índice UVB.
         :return: Devuelve el índice UVA.
         """
-        return self.sensor.uvb
+        value = self.sensor.uvb
+        return value if value >= 0.0 else 0.0
 
     def get_all_datas(self):
         """

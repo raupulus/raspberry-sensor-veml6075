@@ -40,10 +40,9 @@
 import datetime
 
 from VEML6075 import VEML6075
-from AbstractModel import AbstractModel
 
 
-class VEML6075_uva(AbstractModel, VEML6075):
+class VEML6075_uva(VEML6075):
     table_name = 'table_uva'
 
     def get_all_datas(self):
@@ -85,4 +84,4 @@ class VEML6075_uva(AbstractModel, VEML6075):
         consola.
         """
         print('El índice UVA: ', self.get_uva())
-
+        print('Tiempo de integración para UVA: ', self.sensor.integration_time)

@@ -40,10 +40,9 @@
 import datetime
 
 from VEML6075 import VEML6075
-from AbstractModel import AbstractModel
 
 
-class VEML6075_uvb(AbstractModel, VEML6075):
+class VEML6075_uvb(VEML6075):
     table_name = 'table_uvb'
 
     def get_all_datas(self):
@@ -85,4 +84,4 @@ class VEML6075_uvb(AbstractModel, VEML6075):
         consola.
         """
         print('El índice UVB: ', self.get_uvb())
-
+        print('Tiempo de integración para UVB: ', self.sensor.integration_time)

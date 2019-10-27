@@ -46,6 +46,10 @@ from AbstractModel import AbstractModel
 class VEML6075_uv_index(AbstractModel, VEML6075):
     table_name = 'table_uv_index'
 
+    def __init__(self, integration_time=100):
+        i2c = busio.I2C(board.SCL, board.SDA)
+        self.sensor = adafruit_veml6075.VEML6075(i2c, integration_time=integration_time)
+
     def get_all_datas(self):
         """
         Devuelve un diccionario con los datos (coincidiendo con el tablemodel)

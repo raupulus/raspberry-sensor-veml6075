@@ -64,3 +64,11 @@ manualmente desde el enlace indicado al comienzo de este documento.
 https://github.com/adafruit/Adafruit_CircuitPython_VEML6075
 https://learn.adafruit.com/adafruit-veml6075-uva-uvb-uv-index-sensor/python-circuitpython
 https://www.raspberrypi.org/forums/viewtopic.php?t=151317
+
+## Tabla de comparción por índice uv
+
+Índice UV 	        ½T → 56,25 ms 	1T → 112,5 ms 	2T → 225 ms     4T → 450 ms
+Bajo. De 0 a 2 	    0-280 	        0-560 	        0-1120 	        0-2240
+Moderado. De 3 a 5 	281-560 	    561-1120 	    1121-2241 	    2241-4482
+Alto. De 6 a 7 	    561-747 	    1121-1494 	    2242-2988 	    4483-5976
+Muy alto. De 8 a 10 748-1027 	    1495-2054 	    2989-4108 	    5977-8216
